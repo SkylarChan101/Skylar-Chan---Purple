@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
         for (int x = 0; x < 10; x++)
         {
             Instantiate(EnemyPrefab, new Vector2(x * xSpace + xOffset, 3), Quaternion.identity);
+            Instantiate(EnemyPrefab, new Vector2(x * xSpace + xOffset, 3.75f), Quaternion.identity);
             Instantiate(EnemyPrefab, new Vector2(x * xSpace + xOffset, 4.5f), Quaternion.identity);
-            Instantiate(EnemyPrefab, new Vector2(x * xSpace + xOffset, 6f), Quaternion.identity);
         }
     }
 
