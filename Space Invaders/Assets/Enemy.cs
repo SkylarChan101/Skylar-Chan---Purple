@@ -19,20 +19,21 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * speed);
 
-        if (transform.position.x > 10f)
+        if (transform.position.x > 12f)
         {
             direction = Vector2.left;
-           MoveDown();
+            MoveDown();
         }
 
-        if (transform.position.x < -10f)
+        if (transform.position.x < -12f)
         {
             direction = Vector2.right;
-          MoveDown();
+            MoveDown();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("eee");
         animator.SetTrigger("death");
         Destroy(gameObject, 1f);
         Destroy(collision.gameObject);
@@ -40,6 +41,7 @@ public class Enemy : MonoBehaviour
 
     private void MoveDown()
     {
+        Debug.Log("once");
         foreach (Enemy enemy in FindObjectsOfType(typeof(Enemy)))
         {
             enemy.transform.Translate(Vector2.down);
