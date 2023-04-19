@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Transform[] spawnPoints;
     public GameObject rockPrefab;
-    // Start is called before the first frame update
+    // Start is called before the first frame updates
     void Start()
     {
-        for (int i = 0; i < 4; i++)
-        {
-            Vector3 randomPosition = new Vector3(Random.Range(-8, 8), Random.Range(-8, 8), 0f);
-            Instantiate(rockPrefab, randomPosition, Quaternion.identity);
-        }
+        InvokeRepeating("Spawnrocks", 0f, 10f);
     } 
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void Spawnrocks()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Vector3 randomPosition = spawnPoints[Random.Range(0, 3)].position;
+            Instantiate(rockPrefab, randomPosition, Quaternion.identity);
+        }
     }
 }
