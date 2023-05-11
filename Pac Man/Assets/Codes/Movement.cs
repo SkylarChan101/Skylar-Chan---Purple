@@ -9,6 +9,7 @@ public abstract class Movement : MonoBehaviour
     public LayerMask obstacleLayer;
 
     protected Rigidbody2D rb;
+    [SerializeField]
     protected Vector2 direction;
     protected Vector2 nextDirection;
     // Start is called before the first frame update
@@ -29,6 +30,7 @@ public abstract class Movement : MonoBehaviour
         ChildUpdate();
         
     }
+<<<<<<< HEAD
     abstract protected void ChildUpdate();
     private void FixedUpdate()
     {
@@ -55,6 +57,15 @@ public abstract class Movement : MonoBehaviour
         {
             nextDirection = newDirection;
         }
+=======
+
+    void FixedUpdate()
+    {
+        Vector2 position = rb.position;
+        Vector2 translation = direction * speed * Time.fixedDeltaTime;
+        rb.MovePosition(position + translation);
+        Debug.Log(translation+translation);
+>>>>>>> 082f93b09eac894ed64d106c4c35c63b7a713867
     }
 }
 
