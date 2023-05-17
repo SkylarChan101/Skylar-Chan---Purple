@@ -30,8 +30,9 @@ public abstract class Movement : MonoBehaviour
         ChildUpdate();
         
     }
-<<<<<<< HEAD
+
     abstract protected void ChildUpdate();
+
     private void FixedUpdate()
     {
         Vector2 position = rb.position;
@@ -42,7 +43,7 @@ public abstract class Movement : MonoBehaviour
 
     private bool Occupied(Vector2 newDirection)
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1, 5f, obstacleLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1.5f, obstacleLayer);
         return hit.collider != null;
     }
 
@@ -57,15 +58,8 @@ public abstract class Movement : MonoBehaviour
         {
             nextDirection = newDirection;
         }
-=======
-
-    void FixedUpdate()
-    {
-        Vector2 position = rb.position;
-        Vector2 translation = direction * speed * Time.fixedDeltaTime;
-        rb.MovePosition(position + translation);
-        Debug.Log(translation+translation);
->>>>>>> 082f93b09eac894ed64d106c4c35c63b7a713867
     }
+
+    
 }
 
