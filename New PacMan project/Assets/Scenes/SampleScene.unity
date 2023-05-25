@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &55604125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+  m_PrefabInstance: {fileID: 1343986268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &55604131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55604125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b180d6ba8f9bf1841b365bf3230c0a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &206136177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3533606034719142429, guid: 72d51d2ba4d8924428c4d8c2c685748b, type: 3}
@@ -6144,6 +6166,28 @@ Transform:
   m_Father: {fileID: 313386682}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &631417147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7221572948308860491, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
+  m_PrefabInstance: {fileID: 7221572947421321381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &631417153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631417147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b180d6ba8f9bf1841b365bf3230c0a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &730389510
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,7 +6202,7 @@ GameObject:
   - component: {fileID: 730389511}
   - component: {fileID: 730389515}
   - component: {fileID: 730389516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pacman
   m_TagString: Pac Man
   m_Icon: {fileID: 0}
@@ -6262,7 +6306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730389510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.5, z: -5}
+  m_LocalPosition: {x: 2.85, y: -15.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9017,6 +9061,28 @@ Transform:
   m_Father: {fileID: 313386682}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1213110007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+  m_PrefabInstance: {fileID: 1319314731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1213110013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213110007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b180d6ba8f9bf1841b365bf3230c0a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1304436425
 GameObject:
   m_ObjectHideFlags: 0
@@ -9057,11 +9123,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1122655439283694382, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 1122655439283694382, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1122655439283694383, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_Color.b
@@ -9097,7 +9163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122655441040830345, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.46
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 1122655441040830345, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9138,6 +9204,18 @@ PrefabInstance:
     - target: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_Name
       value: Ghost_Pinky
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.94177055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
@@ -9204,12 +9282,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830346, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4ccd48f531caa394da6e02606f6ce3dd, type: 2}
     - target: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_Name
       value: Ghost_Inky
       objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.98238254
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+--- !u!1 &1599014408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+  m_PrefabInstance: {fileID: 2125414038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1599014414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599014408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b180d6ba8f9bf1841b365bf3230c0a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1662448819
 GameObject:
   m_ObjectHideFlags: 0
@@ -10129,9 +10249,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830346, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4ccd48f531caa394da6e02606f6ce3dd, type: 2}
     - target: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
       propertyPath: m_Name
       value: Ghost_Clyde
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830356, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6027765
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122655441040830357, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c239d5efbc1f6f4c8985b3300a02f2b, type: 3}
@@ -10142,6 +10286,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3533606034719142428, guid: 72d51d2ba4d8924428c4d8c2c685748b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3533606034719142429, guid: 72d51d2ba4d8924428c4d8c2c685748b, type: 3}
       propertyPath: m_Name
       value: Pellet
@@ -10247,6 +10395,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node
       objectReference: {fileID: 0}
+    - target: {fileID: 5138236503321092595, guid: 84f88026e7afe7342a0c3e4276332636, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295992750910203646, guid: 84f88026e7afe7342a0c3e4276332636, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295992750910203646, guid: 84f88026e7afe7342a0c3e4276332636, type: 3}
+      propertyPath: availableDirections.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f88026e7afe7342a0c3e4276332636, type: 3}
 --- !u!1001 &6542974228136714812
@@ -10259,6 +10419,10 @@ PrefabInstance:
     - target: {fileID: 6542974227510878296, guid: f82b13413e0cb25459c68af1f5d6959c, type: 3}
       propertyPath: m_Name
       value: Power Pellet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542974227510878297, guid: f82b13413e0cb25459c68af1f5d6959c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6542974227510878299, guid: f82b13413e0cb25459c68af1f5d6959c, type: 3}
       propertyPath: m_RootOrder
@@ -10317,10 +10481,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7221572948308860490, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221572948308860490, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221572948308860490, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221572948308860490, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7221572948308860491, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
       propertyPath: m_Name
       value: Ghost_Blinky
       objectReference: {fileID: 0}
+    - target: {fileID: 7221572948308860501, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4ccd48f531caa394da6e02606f6ce3dd, type: 2}
     - target: {fileID: 7221572948308860502, guid: 0da4436c72b65e04bb0c4dacf613a420, type: 3}
       propertyPath: m_RootOrder
       value: 5

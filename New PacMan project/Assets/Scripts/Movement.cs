@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Movement : MonoBehaviour
 {
-    abstract protected void ChildUpdate();
     public float speed;
     public Vector2 initialDirection;
     public LayerMask obstacleLayer;
@@ -57,4 +56,6 @@ public abstract class Movement : MonoBehaviour
             nextDirection = newDirection;
         }
     }
+
+    abstract protected void ChildUpdate();
 }
