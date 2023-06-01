@@ -48,6 +48,7 @@ public abstract class Movement : MonoBehaviour
     {
         if (!Occupied(newDirection))
         {
+            
             direction = newDirection;
             nextDirection = Vector2.zero;
         }
