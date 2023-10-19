@@ -9,7 +9,7 @@ public abstract class Movement : MonoBehaviour
     public LayerMask obstacleLayer;
 
     protected Rigidbody2D rb;
-    protected Vector2 direction;
+    public Vector2 direction;
     protected Vector2 nextDirection;
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,9 @@ public abstract class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
+        
         if (nextDirection != Vector2.zero)
         {
             SetDirection(nextDirection);
@@ -48,6 +49,7 @@ public abstract class Movement : MonoBehaviour
 
     protected void SetDirection(Vector2 newDirection)
     {
+
         if (!Occupied(newDirection))
         {
             direction = newDirection;

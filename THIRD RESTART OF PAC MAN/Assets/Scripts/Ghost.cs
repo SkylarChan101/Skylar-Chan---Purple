@@ -15,7 +15,7 @@ public class Ghost : Movement
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Node node = collision.GetComponent<Node>();
-
+        
         if (node != null)
         {
             int index = Random.Range(0, node.availableDirections.Count);
@@ -39,10 +39,7 @@ public class Ghost : Movement
         
     }
 
-    private void Update()
-    {
-        
-    }
+    
 
     private void Awake()
     {
@@ -56,7 +53,9 @@ public class Ghost : Movement
 
     private void LeaveHome()
     {
-        transform.position = new Vector3(-34, -10.9f, -1f);
+        obstacleLayer = 1 << 8;
+
+        transform.position = new Vector3(-34.89f, -11.57f, -1);
         direction = new Vector2(-1, 0);
         atHome = false;
         frightened = false;
@@ -70,7 +69,62 @@ public class Ghost : Movement
     {
         if (atHome && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
+            print("bouncing");
             SetDirection(-direction);
         }
+
+        if (collision.gameObject.CompareTag("Pacman"))
+        {
+            if (frightened)
+            {
+                obstacleLayer = 1 << 0;
+                transform.position = new Vector3(-34.87f, -14.3f, -1);
+                body.SetActive(false);
+                eyes.SetActive(true);
+                blue.SetActive(false);
+                white.SetActive(false);
+                atHome = true;
+                CancelInvoke();
+                Invoke("LeaveHome", 4f);
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
+        }
     }
+
+    public void Frighten()
+    {
+        if (!atHome)
+        {
+            frightened = true;
+            body.SetActive(false);
+            eyes.SetActive(false);
+            blue.SetActive(true);
+            white.SetActive(false);
+            Invoke("Flash", 4f);
+        }
+    }
+
+    private void Flash()
+    {
+        body.SetActive(false);
+        eyes.SetActive(false);
+        blue.SetActive(false);
+        white.SetActive(true);
+        Invoke("Reset", 4f);
+    }
+
+    private void Reset()
+    {
+        frightened = false;
+        body.SetActive(true);
+        eyes.SetActive(true);
+        blue.SetActive(false);
+        white.SetActive(false);
+
+    }
+
+
 }

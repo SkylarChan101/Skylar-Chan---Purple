@@ -12,14 +12,7 @@ public class PowerPellet : Pellet
 
         foreach (GameObject ghost in ghosts)
         {
-
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Pacman"))
-        {
-            Eat();
+            ghost.GetComponent<Ghost>().Frighten();
         }
     }
 }
