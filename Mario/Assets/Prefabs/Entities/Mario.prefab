@@ -142,6 +142,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2606622871510362119, guid: 003e34d5685e18c408ec9f82d06d000c, type: 3}
   m_PrefabInstance: {fileID: 1124329542531466349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4334789987595845336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3725091819407620789, guid: 003e34d5685e18c408ec9f82d06d000c, type: 3}
+  m_PrefabInstance: {fileID: 1124329542531466349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8470973934738963147
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4334789987595845336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c5139638e3e59048a64f75dbe73ab1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1817566648961986840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,6 +224,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7adb1cc8f01fa2843b51bf8ff998f0bb, type: 3}
+--- !u!1 &6795447411978702262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5149598262867492014, guid: 7adb1cc8f01fa2843b51bf8ff998f0bb, type: 3}
+  m_PrefabInstance: {fileID: 1817566648961986840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8862879920205199652
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795447411978702262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 963716aefb159bf40929a0e18231c5b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &9148064290578860218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7479704083945388450, guid: 7adb1cc8f01fa2843b51bf8ff998f0bb, type: 3}
