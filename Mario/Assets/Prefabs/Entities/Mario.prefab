@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3525794680939541137}
   - component: {fileID: 2869135639403987014}
   - component: {fileID: 7360541724948454300}
+  - component: {fileID: 8858826039842186429}
   m_Layer: 7
   m_Name: Mario
   m_TagString: Player
@@ -72,6 +73,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &8858826039842186429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707687795587874017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a8af74644ed324eabeedaa4663e732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2000
+  jumpForce: 35
 --- !u!1001 &1124329542531466349
 PrefabInstance:
   m_ObjectHideFlags: 0
