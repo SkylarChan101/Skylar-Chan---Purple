@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBehavior : MonoBehaviour
+public class PlayerBehaviour : MonoBehaviour
 {
     public SpriteRenderer smallRenderer;
     public SpriteRenderer bigRenderer;
@@ -59,7 +59,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Death()
     {
-        smallAnimator.SetTrigger("Death");
+        smallAnimator.SetTrigger("death");
 
         GetComponent<CapsuleCollider2D>().enabled = false;
 

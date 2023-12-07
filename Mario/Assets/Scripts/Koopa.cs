@@ -38,13 +38,13 @@ public class Koopa : MonoBehaviour
             Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRB.velocity = new Vector2(playerRB.velocity.x, 10);
         }
-        else if (shelled && ! shellMoving)
+        else if (shelled && !shellMoving)
         {
             Launch();
         }
         else
         {
-            collision.gameObject.GetComponent<PlayerBehavior>().Hit();
+            collision.gameObject.GetComponent<PlayerBehaviour>().Hit();
         }
     }
 
