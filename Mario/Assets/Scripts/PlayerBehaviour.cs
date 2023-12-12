@@ -17,6 +17,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Hit()
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        
+
+        if (rb.isKinematic == true)
+        {
+            return;
+        }
         if (big)
         {
             Shrink();
@@ -57,7 +64,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     }
 
-    private void Death()
+    public void Death()
     {
         smallAnimator.SetTrigger("death");
 

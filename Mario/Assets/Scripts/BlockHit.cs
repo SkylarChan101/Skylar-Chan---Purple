@@ -26,7 +26,7 @@ public class BlockHit : MonoBehaviour
             Instantiate(item, transform);
             animator.SetTrigger("hit");
             maxHits--;
-            Debug.Log("cheese");
+            
         }
 
         if (maxHits == 0)
