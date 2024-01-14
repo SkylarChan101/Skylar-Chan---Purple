@@ -10,6 +10,22 @@ public class Tetromino : MonoBehaviour
     public static int width = 10;
     public static int height = 20;
     public Vector3 rotationPoint;
+
+    public static Transform[,] grid = new Transform[width, height];
+
+    public void AddToGrid()
+    {
+        foreach (Transform child in transform)
+        {
+            int x = Mathf.RoundToInt(child.transform.position.x);
+            int y = Mathf.RoundToInt(child.transform.position.y);
+
+            grid[x, y] = child;
+        }
+
+    }
+
+    
     //public int x;
     //public int y;
     public bool ValidMove()
@@ -20,7 +36,7 @@ public class Tetromino : MonoBehaviour
             int x = Mathf.RoundToInt(child.transform.position.x);
             int y = Mathf.RoundToInt(child.transform.position.y);
 
-            if (x < 0 || y < 0 )
+            if (x < 0 || y < -1 )
             {
                 return (false);
             }
@@ -84,6 +100,8 @@ public class Tetromino : MonoBehaviour
             if (!ValidMove())
             {
                 transform.position += Vector3.up;
+                this.enabled = false;
+                FindObjectOfType<Spawner>().SpawnTetromino();
             }
         }
         
