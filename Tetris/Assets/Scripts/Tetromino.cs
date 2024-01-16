@@ -7,8 +7,8 @@ public class Tetromino : MonoBehaviour
 {
     private float previousTime;
     public float fallTime = 0.8f;
-    public static int width = 10;
     public static int height = 20;
+    public static int width = 10;
     public Vector3 rotationPoint;
 
     public static Transform[,] grid = new Transform[width, height];
@@ -25,32 +25,85 @@ public class Tetromino : MonoBehaviour
 
     }
 
-    
-    //public int x;
-    //public int y;
-    public bool ValidMove()
+    public void CheckLines()
     {
-        // this code is used to stop the tetrominoes from falling out of the map
-        foreach (Transform child in transform)
+        for (int i = height - 1; i >= 0; i--)
         {
-            int x = Mathf.RoundToInt(child.transform.position.x);
-            int y = Mathf.RoundToInt(child.transform.position.y);
-
-            if (x < 0 || y < -1 )
+            if (HasLine(i))
             {
-                return (false);
-            }
-
-            if (x >= width || y >= height)
-            {
-                return (false);
+                DeleteLine(i);
+                RowDown(i);
             }
         }
-        return (true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool HasLine(int i)
+    {
+        for (int j=0; j < width; j++)
+        {
+            if (grid[j,i] == null)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public void DeleteLine(int i)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            Destroy(grid[j, i].gameObject);
+            grid[j, i] = null;
+        }
+    }
+
+    public void RowDown(int i)
+    {
+        for (int y = i; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                if (grid[x, y] != null)
+                {
+                    grid[x, y - 1] = grid[x, y];
+                    grid[x, y] = null;
+                    grid[x, y - 1].transform.position += Vector3.down;
+                }
+            }
+        }
+    }
+        //public int x;
+        //public int y;
+        public bool ValidMove()
+        {
+            // this code is used to stop the tetrominoes from falling out of the map
+            foreach (Transform child in transform)
+            {
+                int x = Mathf.RoundToInt(child.transform.position.x);
+                int y = Mathf.RoundToInt(child.transform.position.y);
+
+                if (x < 0 || y < 0)
+                {
+                    return (false);
+                }
+
+                if (x >= width || y >= height)
+                {
+                    return (false);
+                }
+
+                if (grid[x, y] != null)
+                {
+                    return false;
+                }
+            }
+            return (true);
+        }
+
+        // Update is called once per frame
+        void Update()
     {
         float tempTime = fallTime;
 
@@ -87,7 +140,6 @@ public class Tetromino : MonoBehaviour
             
         }
          
-
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             tempTime = tempTime / 10;
@@ -99,11 +151,16 @@ public class Tetromino : MonoBehaviour
 
             if (!ValidMove())
             {
+                
                 transform.position += Vector3.up;
+                AddToGrid();
+                CheckLines();
                 this.enabled = false;
                 FindObjectOfType<Spawner>().SpawnTetromino();
+                
             }
         }
+
         
     }
 
